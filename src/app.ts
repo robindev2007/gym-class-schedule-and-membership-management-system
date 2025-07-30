@@ -25,7 +25,7 @@ app.use("/api/admin/trainers", adminTrainersRouter);
 app.use("/api/admin/schedules", adminSchedulesRouter);
 app.use("/api/trainer", trainerRouter);
 app.use("/api/trainee", traineeRouter);
-app.use("/api/schedule", scheduleRouter);
+app.use("/api/schedules", scheduleRouter);
 
 // error handler
 app.use(errorHandler);
