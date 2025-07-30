@@ -15,6 +15,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.json("Server is working");
+});
+
 // routes
 app.use("/api/auth", authRoutes);
 app.use("/api/admin/trainers", adminTrainersRouter);
