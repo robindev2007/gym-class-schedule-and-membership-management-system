@@ -10,7 +10,7 @@ export const PublicScheduleService = {
       orderBy: { date: "asc" },
     });
 
-    // Calculate remaining slots
+    // Calculate remaining slots a
     return schedules.map((schedule) => ({
       id: schedule.id,
       date: schedule.date,
