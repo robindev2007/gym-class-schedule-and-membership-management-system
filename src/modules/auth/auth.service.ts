@@ -1,7 +1,6 @@
 import bcrypt from "bcrypt";
 import { prisma } from "../../config/db";
 import { generateToken } from "../../utils/jwt";
-import { Role } from "@prisma/client";
 
 export const sighup = async (
   name: string,
