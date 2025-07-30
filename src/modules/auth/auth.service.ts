@@ -2,13 +2,12 @@ import bcrypt from "bcrypt";
 import { prisma } from "../../config/db";
 import { generateToken } from "../../utils/jwt";
 import { Role } from "@prisma/client";
-import { errorResponse } from "../../utils/response";
 
 export const sighup = async (
   name: string,
   email: string,
   password: string,
-  role: Role
+  role: "ADMIN" | "TRAINER" | "TRAINEE"
 ) => {
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
